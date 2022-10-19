@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Responsive Banner Ads with HTML5 and CSS3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="/css/kjt.css" />
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+function resize(width, height) {
+	var ad = document.getElementById('ad');
+	var ad2 = document.getElementById('ad2');
+	if (ad) {
+		ad.style.width = width+'px';
+		ad.style.height = height+'px';
+	}
+	if (ad2) {
+		ad2.style.height = height+'px';
+	}
+}
+</script>
+<style type="text/css">
+body {
+	background:#eee;
+	width:50%;
+}
+iframe {
+	border:0;
+}
+#ad {
+	width:300px;
+	height:250px;
+}
+#ad2 {
+	width:100%;
+	height:60px;
+}
+</style>
+</head>
+<body>
+
+<ul>
+	<li><a href="javascript:void(0);" onclick="resize(120, 60);">120 x 60</a></li>
+	<li><a href="javascript:void(0);" onclick="resize(234, 60);">234 x 60</a></li>
+	<li><a href="javascript:void(0);" onclick="resize(468, 60);">468 x 60</a></li>
+	<li><a href="javascript:void(0);" onclick="resize(120, 90);">120 x 90</a></li>
+	<li><a href="javascript:void(0);" onclick="resize(728, 90);">728 x 90</a></li>
+	<li><a href="javascript:void(0);" onclick="resize(300, 250);">300 x 250</a></li>
+	<li><a href="javascript:void(0);" onclick="resize(250, 250);">250 x 250</a></li>
+	<li><a href="javascript:void(0);" onclick="resize(150, 600);">150 x 600</a></li>
+	<li><a href="javascript:void(0);" onclick="resize(250, 600);">250 x 600</a></li>
+</ul>
+<div id="ad">
+	<iframe src="ad.html" border="0" scrolling="no" allowtransparency="true" width="100%" height="100%" style="border:0;"></iframe>
+</div>
+<br />
+<div id="ad2">
+	<iframe src="ad.html" border="0" scrolling="no" allowtransparency="true" width="100%" height="100%" style="border:0;"></iframe>
+</div>
+</body>
+</html>
